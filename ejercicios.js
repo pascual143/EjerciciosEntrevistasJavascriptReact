@@ -47,7 +47,57 @@ function generarArrayAleatorio(cantidad) {
 // Sección 2: React (70%)
 
 // 1. Crea un componente React simple que muestre un título, un párrafo y un botón.
+import React from 'react';
+
+function ComponenteSimple() {
+  return (
+    <div>
+      <h1>Título</h1>
+      <p>Este es un párrafo.</p>
+      <button>Botón</button>
+    </div>
+  );
+}
+
+export default ComponenteSimple;
+
 // 2. Explica el ciclo de vida de un componente React.
+// El ciclo de vida de un componente React se compone de las siguientes etapas:
+// Montaje: El componente se crea y se inserta en el DOM.
+// Actualización: El componente se actualiza cuando se modifica su estado o sus props.
+// Desmontaje: El componente se elimina del DOM.
+
 // 3. ¿Qué son los hooks en React y cómo se utilizan?
+// Los hooks son funciones especiales que permiten a los desarrolladores "engancharse" al estado y al ciclo de vida de los componentes React. 
+  // Algunos hooks comunes son useState, useEffect, useContext, etc.
 // 4. Crea un componente React que utilice el hook useState para gestionar el estado interno del componente.
+import React, { useState } from 'react';
+
+function ComponenteConEstado() {
+  const [contador, setContador] = useState(0);
+
+  return (
+    <div>
+      <p>Contador: {contador}</p>
+      <button onClick={() => setContador(contador + 1)}>Aumentar</button>
+    </div>
+  );
+}
+
+export default ComponenteConEstado;
+
 // 5. Crea un componente React que utilice el hook useEffect para realizar una llamada a una API y mostrar los resultados.
+import React, { useEffect } from 'react';
+
+function ComponenteConEfecto() {
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }, []);
+
+  return <div>Cargando...</div>;
+}
+
+export default ComponenteConEfecto;
+
