@@ -23,13 +23,6 @@ function calcularIMC(peso, altura) {
   };
 }
 
-// console.log
-const contrasena1 = generarContrasena(10, false); // Generar password sin caracteres especiales, length 10
-const contrasena2 = generarContrasena(12, true);  // generar password con caracteres especiales, length 12
-
-console.log(`Contraseña sin caracteres especiales: ${contrasena1}`);
-console.log(`Contraseña con caracteres especiales: ${contrasena2}`);
-
 
 // 2. Generador de contraseñas seguras
 // Crea una función en JavaScript que genere contraseñas seguras aleatorias. 
@@ -49,7 +42,12 @@ function generarContrasena(longitud, incluirCaracteresEspeciales) {
 
   return contrasena;
 }
+// console.log
+const contrasena1 = generarContrasena(10, false); // Generar password sin caracteres especiales, length 10
+const contrasena2 = generarContrasena(12, true);  // generar password con caracteres especiales, length 12
 
+console.log(`Contraseña sin caracteres especiales: ${contrasena1}`);
+console.log(`Contraseña con caracteres especiales: ${contrasena2}`);
 
 // 3.Validación de formulario de registro:
 // Crea una función en JavaScript que valide un formulario de registro de usuario. 
