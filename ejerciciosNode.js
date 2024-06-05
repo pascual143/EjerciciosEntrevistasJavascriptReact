@@ -305,4 +305,55 @@ const port = 3000;
 app.use(express.json());
 
 // Conectar a MongoDB
-mongoose.connect('mongodb://localhost:27017/test',
+mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Definir el modelo User
+const User = mongoose.model('User', new mongoose.Schema({
+  name: String,
+  email: String,
+}));
+
+// Crear un nuevo usuario
+app.post('/users', async (req, res) => {
+  const user = new User(req.body);
+  await user.save();
+  res.status(201).send(user);
+});
+
+// Obtener todos los usuarios
+app.get('/users', async (req, res) => {
+  const users = await User.find();
+  res.send(users);
+});
+
+// Obtener un usuario por ID
+app.get('/users/:id', async (req, res) => {
+  const user = await User.findById(req.params.id);
+  if (!user) {
+    return res.status(404).send('User not found');
+  }
+  res.send(user);
+});
+
+// Actualizar un usuario por ID
+app.put('/users/:id', async (req, res) => {
+  const user = await User.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
+  if (!user) {
+    return res.status(404).send('User not found');
+  }
+  res.send(user);
+});
+
+// Eliminar un usuario por ID
+app.delete('/users/:id', async (req, res) => {
+  const user = await User.findByIdAndDelete(req.params.id);
+  if (!user) {
+    return res.status(404).send('User not found');
+  }
+  res.send('User deleted');
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/`);
+});
+
