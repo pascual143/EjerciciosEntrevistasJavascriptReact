@@ -1,2 +1,2 @@
 
-# Ejercicios para enrevistas en Javcript y React
+# Ejercicios para enrevistas en Javacript y React, Python, Nodejs, tailwind
