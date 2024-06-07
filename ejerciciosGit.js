@@ -5,9 +5,9 @@ Clona un repositorio remoto a tu máquina local.
 1. Usa el comando `git clone` para clonar el siguiente repositorio: `https://github.com/example/example-repo.git`
 
 #### Solución:
-```bash
+// bash
 git clone https://github.com/example/example-repo.git
-```
+
 
 ### Ejercicio 2: Creación y Cambio de Ramas
 **Descripción:** Crea una nueva rama y cambia a esa rama.
