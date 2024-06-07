@@ -17,9 +17,9 @@ git clone https://github.com/example/example-repo.git
 2. Cambia a la nueva rama.
 
 #### Solución:
-```bash
+// bash
 git checkout -b feature-branch
-```
+
 
 ### Ejercicio 3: Realizar y Revertir Commits
 **Descripción:** Realiza un commit y luego reviértelo.
@@ -30,12 +30,12 @@ git checkout -b feature-branch
 3. Reviérte el commit realizado.
 
 #### Solución:
-```bash
+// bash
 touch example.txt
 git add example.txt
 git commit -m "Add example.txt"
 git revert HEAD
-```
+
 
 ### Ejercicio 4: Fusiones y Resolución de Conflictos
 **Descripción:** Crea un conflicto de fusión y resuélvelo.
@@ -51,7 +51,7 @@ git revert HEAD
 8. Funde (merge) la rama `conflict-branch` en `main` y resuelve el conflicto.
 
 #### Solución:
-//bash
+// bash
 # En la rama main
 echo "Version 1" > conflict.txt
 git add conflict.txt
