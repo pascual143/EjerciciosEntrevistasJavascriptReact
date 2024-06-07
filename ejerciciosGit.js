@@ -51,7 +51,7 @@ git revert HEAD
 8. Funde (merge) la rama `conflict-branch` en `main` y resuelve el conflicto.
 
 #### Solución:
-```bash
+//bash
 # En la rama main
 echo "Version 1" > conflict.txt
 git add conflict.txt
@@ -82,7 +82,7 @@ git merge conflict-branch
 # Añadir y realizar commit de la resolución del conflicto
 git add conflict.txt
 git commit -m "Resolve merge conflict between conflict-branch and main"
-```
+
 
 ### Ejercicio 5: Rebasing de una Rama
 **Descripción:** Realiza un rebase de una rama sobre otra.
@@ -96,7 +96,7 @@ git commit -m "Resolve merge conflict between conflict-branch and main"
 6. Cambia a la rama `feature-rebase` y realiza un rebase sobre `main`.
 
 #### Solución:
-```bash
+//bash
 # Crear y cambiar a la rama feature-rebase
 git checkout -b feature-rebase
 echo "Rebase content" > rebase.txt
@@ -112,7 +112,6 @@ git commit -m "Add main-change.txt"
 # Cambiar a la rama feature-rebase y realizar rebase
 git checkout feature-rebase
 git rebase main
-```
 
 ### Ejercicio 6: Stashing
 **Descripción:** Utiliza el stash para guardar y restaurar cambios no confirmados.
@@ -124,7 +123,7 @@ git rebase main
 4. Recupera los cambios guardados en el stash.
 
 #### Solución:
-```bash
+  //bash
 # Realizar cambios en un archivo existente o crear uno nuevo
 echo "Stash this change" > stash.txt
 git add stash.txt
@@ -139,7 +138,7 @@ git commit -m "Add another-change.txt"
 
 # Recuperar los cambios guardados en el stash
 git stash pop
-```
+
 
 ### Ejercicio 7: Trabajar con Remotos
 **Descripción:** Añade un nuevo remoto y empuja los cambios a ese remoto.
@@ -149,13 +148,13 @@ git stash pop
 2. Empuja la rama `main` al remoto `backup`.
 
 #### Solución:
-```bash
+// bash
 # Añadir un nuevo remoto
 git remote add backup https://github.com/example/backup-repo.git
 
 # Empujar la rama main al remoto backup
 git push backup main
-```
+
 
 ### Ejercicio 8: Búsqueda de Cambios (Blame)
 **Descripción:** Utiliza `git blame` para encontrar quién realizó un cambio en una línea específica de un archivo.
@@ -164,8 +163,7 @@ git push backup main
 1. Encuentra quién realizó el cambio en la primera línea de `example.txt`.
 
 #### Solución:
-```bash
+// bash
 git blame example.txt -L 1,1
-```
 
-Estos ejercicios prácticos cubren una variedad de operaciones comunes y esenciales en Git que un desarrollador con dos años de experiencia debería conocer. Te permitirán evaluar la habilidad del candidato para manejar tareas de versionado, fusión, resolución de conflictos, y trabajo con ramas y remotos.
+
