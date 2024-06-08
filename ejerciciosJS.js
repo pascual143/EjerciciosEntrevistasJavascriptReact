@@ -1,8 +1,8 @@
 // 1.Calculadora de IMC:
 
-//Crea una función en JavaScript que calcule el Índice de Masa Corporal (IMC) de una persona a partir de su peso y altura. 
+// Crea una función en JavaScript que calcule el Índice de Masa Corporal (IMC) de una persona a partir de su peso y altura. 
 // La función debe tomar dos parámetros: peso (en kilogramos) y altura (en metros). 
-//La función debe devolver un valor numérico que represente el IMC, y también debe mostrar una clasificación según la siguiente tabla:
+// La función debe devolver un valor numérico que represente el IMC, y también debe mostrar una clasificación según la siguiente tabla:
 function calcularIMC(peso, altura) {
   const imc = peso / (altura * altura);
   let clasificacion;
