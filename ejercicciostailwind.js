@@ -1,4 +1,4 @@
-// Ejercicio 1: Crear un Botón Estilizado
+// Ejercicio 1: Crear un Botón Estilizado.
 Descripción: Crea un botón utilizando Tailwind CSS que tenga un fondo azul, texto blanco, padding, y un borde redondeado.
 
 Instrucciones:
