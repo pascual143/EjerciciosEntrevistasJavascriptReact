@@ -1,4 +1,4 @@
-### Ejercicio 1: Clonación de un Repositorio
+### Ejercicio 1: Clonación de un Repositorio.
 Clona un repositorio remoto a tu máquina local.
 
 #### Instrucciones:
