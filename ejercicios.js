@@ -1,4 +1,4 @@
-# Conceptos básicos de javscript.
+# Conceptos básicos de javscript
 
 // 1. Escribe una función en JavaScript que tome dos números como parámetros y devuelva el mayor de los dos.
 function obtenerMaximo(numero1, numero2) {
